@@ -1,7 +1,7 @@
 /**
  * 
  */
-package sw03;
+package ch.hslu.sw03;
 
 /**
  * @author Wok

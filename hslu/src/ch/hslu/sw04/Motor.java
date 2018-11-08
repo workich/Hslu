@@ -1,30 +1,30 @@
 /**
- * Stellt das Radio eines Fahrzeuges dar.
+ * Stellt einen Motor eines Fahrzeuges dar.
  *
  * @author Matej Mrnjec
  * @version 1.0.0.0
  */
 
-package sw04;
+package ch.hslu.sw04;
 
-public class Radio implements Switchable {
+public class Motor implements Switchable {
 	/**
 	 * Repraesentiert den aktuellen switch Zustand
 	 */
-	private int volume = 0;
+	private int rpm = 0;
 
 	/**
 	 * Konstruktor, setzt aktuellen switch Zustand auf false
 	 */
-	public Radio() {
-		this.volume = 0;
+	public Motor() {
+		this.rpm = 0;
 	}
 
 	/**
 	 * Konstruktor, setzt aktuellen switch Zustand auf false
 	 */
-	public Radio(int volume) {
-		this.volume = volume;
+	public Motor(int rpm) {
+		this.rpm = rpm;
 	}
 
 	/**
@@ -32,7 +32,7 @@ public class Radio implements Switchable {
 	 */
 	@Override
 	public void switchOn() {
-		volume = 100;
+		rpm = 1000;
 	}
 
 	/**
@@ -40,7 +40,7 @@ public class Radio implements Switchable {
 	 */
 	@Override
 	public void switchOff() {
-		volume = 0;
+		rpm = 0;
 	}
 
 	/**
@@ -48,7 +48,7 @@ public class Radio implements Switchable {
 	 */
 	@Override
 	public boolean isSwitchedOn() {
-		return volume != 0 ? true : false;
+		return rpm != 0 ? true : false;
 	}
 
 	/**
@@ -56,6 +56,6 @@ public class Radio implements Switchable {
 	 */
 	@Override
 	public boolean isSwitchedOff() {
-		return volume == 0 ? true : false;
+		return rpm == 0 ? true : false;
 	}
 }

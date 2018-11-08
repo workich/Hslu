@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-package sw04;
+package ch.hslu.sw04;
 
 public class Licht implements Switchable {
 	/**
